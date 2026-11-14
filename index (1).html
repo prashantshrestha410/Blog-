@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aetheris — Coming Soon</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #060d1f;
+      background-image: radial-gradient(circle at 50% 35%, rgba(37, 99, 235, 0.22), transparent 60%);
+      color: #ffffff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 28px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-box {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #2563eb, #38bdf8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 18px;
+      color: #ffffff;
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+    }
+
+    .brand-name {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+    }
+
+    .badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background-color: rgba(56, 189, 248, 0.12);
+      color: #7dd3fc;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    main {
+      width: 100%;
+      max-width: 680px;
+      margin: auto;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(34px, 6vw, 56px);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 18px;
+      background: linear-gradient(90deg, #ffffff, #bae6fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .subtitle {
+      color: rgba(191, 219, 254, 0.75);
+      font-size: 17px;
+      line-height: 1.6;
+      max-width: 500px;
+      margin: 0 auto 36px auto;
+    }
+
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      max-width: 440px;
+      margin: 0 auto 36px auto;
+    }
+
+    .time-box {
+      background-color: #0b1736;
+      border: 1px solid rgba(59, 130, 246, 0.28);
+      border-radius: 16px;
+      padding: 16px 8px;
+    }
+
+    .time-num {
+      font-size: clamp(24px, 4vw, 34px);
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .time-num.accent {
+      color: #38bdf8;
+    }
+
+    .time-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: rgba(147, 197, 253, 0.65);
+      margin-top: 4px;
+    }
+
+    form {
+      display: flex;
+      gap: 10px;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+
+    input[type="email"] {
+      flex: 1;
+      padding: 14px 16px;
+      border-radius: 12px;
+      background-color: #0b1736;
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      color: #ffffff;
+      font-size: 15px;
+      outline: none;
+    }
+
+    input[type="email"]::placeholder {
+      color: rgba(147, 197, 253, 0.45);
+    }
+
+    input[type="email"]:focus {
+      border-color: #38bdf8;
+    }
+
+    button {
+      padding: 14px 24px;
+      border-radius: 12px;
+      border: none;
+      background-color: #2563eb;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.35);
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #1d4ed8;
+    }
+
+    footer {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 24px;
+      border-top: 1px solid rgba(30, 58, 138, 0.45);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 13px;
+      color: rgba(147, 197, 253, 0.5);
+    }
+
+    .links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .links a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .links a:hover {
+      color: #7dd3fc;
+    }
+
+    @media (max-width: 520px) {
+      form {
+        flex-direction: column;
+      }
+      footer {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo-wrap">
+      <div class="logo-box">A</div>
+      <span class="brand-name">Aetheris</span>
+    </div>
+    <span class="badge">Launching Feb 2027</span>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>The next wave of digital innovation.</h1>
+    <p class="subtitle">
+      We are crafting a seamless experience built for speed and simplicity. Join the waitlist for exclusive early access.
+    </p>
+
+    <!-- 3-Month Countdown -->
+    <div class="countdown">
+      <div class="time-box">
+        <div id="days" class="time-num">92</div>
+        <div class="time-label">Days</div>
+      </div>
+      <div class="time-box">
+        <div id="hours" class="time-num">00</div>
+        <div class="time-label">Hours</div>
+      </div>
+      <div class="time-box">
+        <div id="minutes" class="time-num">00</div>
+        <div class="time-label">Mins</div>
+      </div>
+      <div class="time-box">
+        <div id="seconds" class="time-num accent">00</div>
+        <div class="time-label">Secs</div>
+      </div>
+    </div>
+
+    <!-- Direct HTML Form (Bypasses CORS / Network Errors) -->
+    <form action="https://web3forms.com" method="POST">
+      <!-- PASTE YOUR WEB3FORMS KEY INSIDE VALUE BELOW -->
+      <input type="hidden" name="access_key" value="eac62c15-aea9-468b-9112-34d3066d91c5" />
+      <input type="hidden" name="subject" value="New Aetheris Waitlist Signup!" />
+      <input type="hidden" name="from_name" value="Aetheris Waitlist" />
+      
+      <input type="email" name="email" required placeholder="Enter your email address..." />
+      <button type="submit">Notify Me</button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Aetheris. All rights reserved.</p>
+    <div class="links">
+      <a href="#">Twitter / X</a>
+      <a href="pxshantt">Instagram</a>
+      <a href="mailto:hello@aetheris.com">Contact</a>
+    </div>
+  </footer>
+
+  <!-- Live 3-Month Countdown Script -->
+  <script>
+    const launchDate = new Date("February 14, 2027 17:00:00").getTime();
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = launchDate - now;
+      if (distance <= 0) return;
+
+      document.getElementById("days").textContent = String(Math.floor(distance / (1000 * 60 * 60 * 24))).padStart(2, '0');
+      document.getElementById("hours").textContent = String(Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+      document.getElementById("minutes").textContent = String(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+      document.getElementById("seconds").textContent = String(Math.floor((distance % (1000 * 60)) / 1000)).padStart(2, '0');
+    }
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>
