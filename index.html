@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashant Shrestha | Blog</title>
+    <style>
+        /* Modern CSS Reset & Variable Tokens */
+        :root {
+            --primary-color: #2563eb; /* Clean Modern Blue */
+            --text-main: #1f2937;    /* Dark Charcoal */
+            --text-muted: #6b7280;   /* Cool Gray */
+            --bg-body: #f9fafb;      /* Soft Light Gray */
+            --bg-card: #ffffff;      /* Pure White */
+            --border-color: #e5e7eb;  /* Thin Light Gray */
+            --radius: 12px;          /* Smooth rounded corners */
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding-bottom: 60px;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero / Header Section */
+        header {
+            max-width: 1100px;
+            margin: 40px auto 20px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -0.025em;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Responsive Card Grid */
+        .main-container {
+            max-width: 1100px;
+            margin: 40px auto 0 auto;
+            padding: 0 20px;
+        }
+
+        .grid-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Article Card Styling */
+        .card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Hover effect makes the card rise subtly */
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.05);
+            border-color: #cbd5e1;
+        }
+
+        .card-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-tag {
+            align-self: flex-start;
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 4px 10px;
+            border-radius: 50px;
+            margin-bottom: 12px;
+            letter-spacing: 0.05em;
+        }
+
+        .card-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 10px;
+            color: var(--text-main);
+            transition: var(--transition);
+        }
+
+        .card:hover .card-title {
+            color: var(--primary-color);
+        }
+
+        .card-excerpt {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+            margin-top: auto;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 1100px;
+            margin: 80px auto 0 auto;
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Sticky Navigation Block -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Prashant's Blog</a>
+            <div class="nav-links">
+                <!-- Points back directly to your main portfolio site -->
+                <a href="https://prashantshrestha.com.np">← Back to Portfolio</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Header Area -->
+    <header>
+        <h1>Writing from Scratch</h1>
+        <p>Documenting my journey through web development, system administration, and programming.</p>
+    </header>
+
+    <!-- Content Workspace -->
+    <div class="main-container">
+        <h2 class="grid-title">Latest Articles</h2>
+        
+        <div class="blog-grid">
+
+            <!-- Card 1: Your First Post Block -->
+            <a href="my-first-blog.html" class="card">
+                <div class="card-content">
+                    <span class="card-tag">Web Dev</span>
+                    <h3 class="card-title">My First Blog Post: Building from Scratch</h3>
+                    <p class="card-excerpt">An inside look at how I coded this entire blog by hand, connected a .com.np domain, and set up native deployment configurations completely natively using static files.</p>
+                    <div class="card-meta">Nov 26, 2026 • 2 min read</div>
+                </div>
+            </a>
+
+            <!-- Card 2: Example Placeholding Layout for your Next Post -->
+            <a href="#" class="card" style="opacity: 0.7; cursor: default;" onclick="return false;">
+                <div class="card-content">
+                    <span class="card-tag">SEO</span>
+                    <h3 class="card-title">Demystifying XML Sitemaps and Crawling Rules</h3>
+                    <p class="card-excerpt">A breakdown of why robots.txt and sitemap.xml files are essential maps for search engine spiders checking your web layouts.</p>
+                    <div class="card-meta">Coming Soon • 3 min read</div>
+                </div>
+            </a>
+
+            <!-- Future Cards go here! Just copy and paste the <a> block structural layout -->
+
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Prashant Shrestha. Handcoded with HTML & CSS. Hosted via GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
