@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prashant Shrestha | Blog (Coming Soon)</title>
+    <style>
+        /* Modern CSS Variables for easy tweaking */
+        :root {
+            --bg-dark: #0f172a;      /* Rich Midnight Blue */
+            --text-bright: #f8fafc;  /* Clean Off-White */
+            --text-muted: #94a3b8;   /* Slate Gray */
+            --accent-blue: #3b82f6;  /* Electric Blue Tint */
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-bright);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 100vh;
+            padding: 24px;
+            overflow-x: hidden;
+        }
+
+        /* Top Nav Bar Layout */
+        nav {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+        }
+
+        .back-link {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        .back-link:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Main Center Message Area */
+        main {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .badge {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: var(--accent-blue);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            padding: 6px 14px;
+            border-radius: 50px;
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        /* Subtle glowing gradient on name text highlight */
+        h1 span {
+            color: var(--accent-blue);
+            background: linear-gradient(to right, #3b82f6, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            line-height: 1.6;
+            margin-bottom: 32px;
+        }
+
+        /* Minimal loading tracker visual asset line */
+        .loading-bar {
+            width: 120px;
+            height: 4px;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .loading-progress {
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 40%;
+            background-color: var(--accent-blue);
+            border-radius: 10px;
+        }
+
+        /* Footer Copyright Setup */
+        footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(148, 163, 184, 0.5);
+            letter-spacing: 0.025em;
+        }
+
+        /* Responsive Breakpoint styling for mobile view screens */
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 2.25rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Simple Navigation Block -->
+    <nav>
+        <div class="logo">PS // Writing</div>
+        <!-- Update this link to point to your main portfolio address -->
+        <a href="https://prashantshrestha410.com.np" class="back-link">← Visit Main Portfolio</a>
+    </nav>
+
+    <!-- Main Dynamic Frame -->
+    <main>
+        <div class="badge">Development Phase</div>
+        <h1>Something is <span>Cooking.</span></h1>
+        <p>I am currently setting up my main personal portfolio space. Once that is fully ready, this subdomain will become my open notebook for web development configurations and coding insights.</p>
+        
+        <!-- Loading Visual Bar Accent -->
+        <div class="loading-bar">
+            <div class="loading-progress"></div>
+        </div>
+    </main>
+
+    <!-- Footer Meta -->
+    <footer>
+        <p>© 2026 Prashant Shrestha. Handcoded from Scratch.</p>
+    </footer>
+
+</body>
+</html>
